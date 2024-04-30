@@ -1,0 +1,36 @@
+﻿@model List<Data.Model.LutadorModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="~/css/vencedor.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duelo Final!</title>
+</head>
+<body style="background-image: url('../img/backgrounds/@(Model[0].Id).jpg');">
+        <div class= "primeiro">
+        <h1>Venceu!</h1>
+        </div>
+        <div class="descritivo">
+            <a>Total de Lutas: @(Model[0].TotalDeLutas)</a>
+            <br />
+            <a>Vitórias: @(Model[0].Vitorias)</a>
+        </div>
+    <div class="imagem-segundo" id="move-segundo">
+        <img src="~/img/personagens/2.png" />
+        </div>
+        <div class="segundo"> 
+            <h1>Segundo colocado:</h1>
+       
+        <h3>@(Model[1].Nome)</h3>
+        <a>Total de Lutas: @(Model[1].TotalDeLutas)</a>
+        <br />
+        <a>Vitórias: @(Model[1].Vitorias)</a>
+        </div>
+    <a class="button-novamente" asp-area="" asp-controller="Lutadores" asp-action="Selecao">Jogar novamente</a>
+</body>
+</html>

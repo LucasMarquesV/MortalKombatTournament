@@ -1,0 +1,165 @@
+@{
+    
+}
+html {
+    width: 1883px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Copperplate Gothic' , sans-serif;
+}
+
+body {
+    background-image: url('../img/backgrounds/empty3.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    width: 1800px;
+    margin: 10px;
+    padding: 0px;
+}
+
+    .wrapper .title {
+        font-size: 24px;
+        color: #f321bf;
+        font-weight: 700;
+        text-align: center;
+        padding-top: 10px;
+        margin-bottom: 50px;
+    }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-left: 30px;
+    width: 100%;
+}
+
+    .container .option_item {
+        display: block;
+        position: relative;
+        width: 200px;
+        height: 390px;
+        margin: 10px;
+        font-size: 14px;
+    }
+
+.option_item .option_inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    border: 4px solid transparent;
+    position: relative;
+}
+
+.option_item .checkbox {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    z-index: 1;
+    display: none;
+}
+
+.option_item .option_inner .image {
+    margin-top: 600px;
+}
+
+
+.images {
+    position: absolute;
+    z-index: 2;
+    margin-left: -60px;
+    cursor: pointer;
+}
+
+.image2 {
+    margin-top: -320px;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.nome {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 23px;
+    color: #f321bf;
+    font-weight: bold;
+    z-index: 5;
+    margin-top: 250px;
+    background: linear-gradient(transparent, black);
+    background-blend-mode: color;
+    box-shadow: red;
+}
+
+.outrasInfos {
+    position: relative;
+    z-index: 3;
+    background: black;
+    color: #f321bf;
+}
+
+.detalhes{
+    opacity:0;
+}
+.option_item input.checkbox:checked ~ .option_inner {
+    border-color: transparent;
+}
+.option_item input.checkbox:checked ~ .images .image2 {
+    opacity: 100%;
+    transition: opacity 1.5s ease-in-out;
+}
+.option_item input.checkbox:checked ~ .option_inner .detalhes {
+    opacity: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+.button-iniciar {
+    background-color: transparent;
+    position: absolute;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 150px;
+}
+    .button-iniciar:hover {
+        background: black;
+        background-blend-mode: color;
+        box-shadow: 0 0 10px #f321bf, 0 0 40px #f321bf, 0 0 80px #f321bf;
+    }
+    .button-iniciar:disabled {
+        opacity: 0.5; 
+        cursor: not-allowed; 
+    }
+
+.button-menu {
+    background-color: transparent;
+    position: absolute;
+    transition: 0.3s;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #f321bf;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 40px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 1550px;
+}
+
+    .button-menu:hover {
+        background: black;
+        background-blend-mode: color;
+        box-shadow: 0 0 10px #f321bf, 0 0 40px #f321bf, 0 0 80px #f321bf;
+    }

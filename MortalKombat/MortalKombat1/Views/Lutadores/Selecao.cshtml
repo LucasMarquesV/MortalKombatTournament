@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Data.Model.LutadorModel>
+
+@{
+    Layout = null;
+}
+<head>
+    <link type="text/css" rel="stylesheet" href="~/css/selecao.css" />
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <a class="button-menu" asp-area="" asp-controller="Home" asp-action="Index">MENU</a>
+        <form asp-controller="Lutadores" asp-action="duelofinal" method="post">
+            <button type="submit" class="button-iniciar" id="iniciar-button" disabled>
+                <img src="~/img/Botoes/fight2.png" width="200px" height="60px" alt="Texto Alternativo da Imagem">
+            </button>
+            <div class="title">
+                <h1>SELECIONE OS 16 LUTADORES!</h1>
+            </div>
+
+            <div class="container">
+                @foreach (var item in Model)
+                {
+                    <label class="option_item">
+                        <input type="checkbox" class="checkbox" name="lutadoresSelecionados" value="@item.Id">
+                        <audio id="checkboxSound">
+                            <source src="~/audio/@(item.Id).mp3" type="audio/mpeg">
+                        </audio>
+
+                        <div class="images">
+                            <div class="image">
+                                <img src="~/img/personagens/@(item.Id)shadow2.png" width="310px" height="320px">
+                            </div>
+                            <div class="image2">
+                                <img src="~/img/personagens/@(item.Id).png" width="320px" height="340px">
+                            </div>
+                        </div>
+                        <div class="option_inner">
+                            <div class="tickmark">
+                            </div>
+                            <div class="detalhes">
+                                <div class="nome">@Html.DisplayFor(modelItem => item.Nome)</div>
+                                <div class="outrasInfos">
+                                    <div class="Idade">Idade: @Html.DisplayFor(modelItem => item.Idade)</div>
+                                    <div class="ArtesMarciais">Artes Marciais: @Html.DisplayFor(modelItem => item.ArtesMarciais)</div>
+                                    <div class="TotalDeLutas">Total De Lutas: @Html.DisplayFor(modelItem => item.TotalDeLutas)</div>
+                                    <div class="Derrotas">Derrotas: @Html.DisplayFor(modelItem => item.Derrotas)</div>
+                                    <div class="Vitorias">Vitorias: @Html.DisplayFor(modelItem => item.Vitorias)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                }
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+<script src="~/js/selecao.js"></script>

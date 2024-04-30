@@ -1,0 +1,68 @@
+footer {
+    position:absolute;
+    font-family: consolas;
+    bottom: 12px;
+}
+.descritivo {
+    position: relative;
+    display: block;
+    color: #2196f3;
+    letter-spacing: 2px;
+    font-size: 14px;
+    opacity: 40%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: consolas;
+}
+.button-iniciar{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 30px;
+    overflow: hidden;
+    transition: 0.3s;
+    right: 400px;
+}
+
+.button-iniciar:hover{
+    color: #48f7fa;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+}
+
+.button-sobre{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #f321bf;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 30px;
+    overflow: hidden;
+    transition: 0.3s;
+    left: 400px
+}
+
+.button-sobre:hover{
+    color: #fbff21;
+    background: #f321bf;
+    box-shadow: 0 0 10px #f321bf, 0 0 40px #f321bf, 0 0 80px #f321bf;
+}
+.background {
+    background-image: url('../img/Backgrounds/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}

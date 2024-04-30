@@ -1,0 +1,32 @@
+﻿@model List<Data.Model.LutadorModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="~/css/duelofinal.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duelo Final!</title>
+</head>
+<body>
+    <div class="video-player">
+        <div class="descritivo">
+            <a>  Ao final do torneio restaram apenas @(Model[0].Nome) e @(Model[1].Nome). Em seu ultimo suspiro, @(Model[0].Nome) surpreendeu @(Model[1].Nome) com um golpe decisivo!</a>
+        </div>
+        <video src="~/video/@(Model[0].Id)finish@(Model[1].Id).mp4" class="video" poster="x"></video>
+        <div class="player-controls">
+            <form asp-controller="Lutadores" asp-action="finishhim" method="post">
+                @foreach (var item in Model)
+                {
+                    <input type="hidden" name="finalistasSelecionados" value="@item.Id">
+                }
+                <button type="submit" class="button-finish" id="finish-button">Ver Golpe</button>
+            </form>
+        </div>
+    </div>
+<script src="~/js/duelofinal.js"></script>
+</body>
+</html>

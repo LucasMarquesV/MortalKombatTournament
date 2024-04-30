@@ -1,0 +1,32 @@
+﻿@model List<Data.Model.LutadorModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="~/css/finishhim.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duelo Final!</title>
+</head>
+<body>
+    <div class="video-player">
+        <div class="descritivo">
+            <a> @(Model[1].Nome) perdeu sua consciência. @(Model[0].Nome) encontrou uma brecha para finaliza-lo(a)!</a>
+        </div>
+        <video src="~/video/@(Model[0].Id)Fatality@(Model[1].Id).mp4" class="video" poster="x"></video>
+        <div class="player-controls">
+            <form asp-controller="Lutadores" asp-action="vencedor" method="post">
+                @foreach (var item in Model)
+                {
+                    <input type="hidden" name="finalistasSelecionados" value="@item.Id">
+                }
+                <button type="submit" class="button-finish" id="finish-button">Fatality</button>
+            </form>
+        </div>
+    </div>
+    <script src="~/js/finishhim.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+html {
+    width: 1883px;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Copperplate Gothic', sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('../img/backgrounds/@(Model[0].Id).jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.primeiro {
+    position: absolute;
+    top: 440px;
+    left: 540px;
+    right: 0px;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+}
+.descritivo {
+    font-size: 30px;
+    position: absolute;
+    top: 510px;
+    left: 700px;
+    overflow: hidden;
+    text-align: right;
+    background-color: #f321bf;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+    .descritivo a {
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+
+.button-novamente {
+    background-color: transparent;
+    position: absolute;
+    transition: 0.3s;
+    display: inline-block;
+    padding: 9px 9px;
+    color: #f321bf;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 40px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-left: 150px;
+    margin-top: 25px;
+}
+
+    .button-novamente:hover {
+        color: black;
+        background: #f321bf;
+        background-blend-mode: color;
+        box-shadow: 0 0 10px #f321bf, 0 0 40px #f321bf, 0 0 80px #f321bf;
+    }
+
+.segundo {
+    position: fixed;
+    bottom: 0;
+    left: 10%;
+    transform: translateX(-50%);
+    text-align: left;
+    margin-bottom: 200px;
+    margin-left: 10px;
+    overflow: hidden;
+    background: #f321bf;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.imagem-segundo {
+    position: absolute;    
+    top: 500px;
+    overflow: hidden;
+    left: -120px;
+}

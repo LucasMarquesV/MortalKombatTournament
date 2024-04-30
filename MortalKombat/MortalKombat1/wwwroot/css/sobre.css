@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    display:flex;
+    align-items: center;
+    min-height: 100vh;
+    font-family: consolas;
+    color: #fff;
+}
+
+.button-retornar{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #f321bf;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 30px;
+    overflow: hidden;
+    transition: 0.3s;
+    top: -460px;
+    left: 1650px;
+}
+
+.button-retornar:hover{
+    color: #fbff21;
+    background: #f321bf;
+    box-shadow: 0 0 10px #f321bf, 0 0 40px #f321bf, 0 0 80px #f321bf;
+}
+.background {
+    background-image: url('../img/Backgrounds/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.titulo{
+    position:absolute;
+    height:70px;
+    margin-top: -940px;
+    margin-left: 40px;
+}
+.regras {
+    display: block;
+    position: relative;
+    width: 600px;
+    height: 340px;
+    margin: -170px;
+    margin-top: -600px;
+    font-size: 20px;
+}
+
+.ideia {
+    display: block;
+    position: relative;
+    width: 600px;
+    height: 250px;
+    margin: 0px;
+    right: 430px;
+    font-size: 20px;
+}
+.criacao {
+    display: block;
+    position: relative;
+    width: 600px;
+    height: 0px;
+    margin: 0px;
+    right: 1030px;
+    font-size: 20px;
+}
+.desenvolvido {
+    position: absolute;
+    width: 280px;
+    display: block;
+    color: #f321bf;
+    letter-spacing: 2px;
+    margin-top: 350px;
+    margin-left: -100px;
+    font-size: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+.desenvolvido:hover {
+    color: #fbff21;
+    background: #f321bf;
+    box-shadow: 0 0 10px #f321bf, 0 0 40px #f321bf, 0 0 80px #f321bf;
+}
